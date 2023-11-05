@@ -1,0 +1,41 @@
+formatter: markdown document
+
+settings:
+  anchor: true
+  default: true
+  escape: true
+  indent: 1
+  required: true
+  sensitive: true
+  type: true
+
+header: |
+  # Terraform Module Documentation
+  This documentation provides information about the Terraform module.
+
+footer: |
+  ---
+  Copyright (c) 2023 Simon Joz. All rights reserved.
+
+sections:
+  - title: "Module Inputs" # Define a section for module inputs
+    id: inputs
+    hide_empty: true # Hide this section if there are no inputs
+
+  - title: "Module Outputs" # Define a section for module outputs
+    id: outputs
+    hide_empty: true # Hide this section if there are no outputs
+
+  - title: "Module Resources" # Define a section for module resources
+    id: resources
+    hide_empty: true # Hide this section if there are no resources
+
+  - title: "Module Providers" # Define a section for module providers
+    id: providers
+    hide_empty: true # Hide this section if there are no providers
+
+output:
+  mode: replace
+  file: ./README.md
+
+

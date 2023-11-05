@@ -1,0 +1,31 @@
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Exclude all .tfvars files, which may contain sensitive data
+*.tfvars
+
+# Ignore override files as they are usually used to reassign variables
+override.tf
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
+
+# .terraform.lock.hcl is used to lock the provider versions, and Terraform should manage it
+.terraform.lock.hcl
+
+# Ignore the .terraform-version file
+.terraform-version
+
+# VS Code settings for Terraform
+.vscode/settings.json
+
+# Local .terraform working directory
+.terraform
