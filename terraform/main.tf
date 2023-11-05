@@ -1,3 +1,18 @@
+/**
+ * # Terraform Module Documentation
+ *
+ * This Terraform code defines a module for deploying a web server in AWS. The module provisions an EC2 instance, configures it with an AWS Systems Manager role,
+ * and sets up a security group. The web server is built using an AWS Launch Template and is included in an AWS Auto Scaling Group.
+ * Additionally, the code defines an AWS Systems Manager patch baseline and an associated patch group to manage patching.
+ * The user data script installs and configures the Apache web server and MySQL, and it sets up a WordPress instance.
+ *
+ * ## User Data
+ *
+ * The user data script installs Apache, MySQL, and WordPress on the EC2 instance.
+ *
+ */
+
+
 locals {
   web_server_instance_name = "WEB-SERVER"
   web_server_patch_group   = "WEB-SERVER-PATCH-GROUP"
@@ -192,3 +207,12 @@ resource "aws_ssm_association" "this" {
     values = [local.web_server_patch_group]
   }
 }
+
+/**
+ * # Footer
+ *
+ * Copyright (c) 2023 Simon Joz. All rights reserved.
+ *
+ */
+
+
